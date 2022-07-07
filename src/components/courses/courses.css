@@ -1,0 +1,85 @@
+.courses__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.course {
+  margin-bottom: 5rem;
+  background: var(--color-bg1);
+  text-align: center;
+  border: 1px solid transparent;
+  transition: var(--transition);
+  border-radius: 10px;
+}
+
+.course:hover {
+  background: transparent;
+  border-color: var(--color-primary);
+  color: var(--color-success);
+}
+
+.courses{
+  margin-top: 1rem;
+}
+
+.course__heading h1 {
+  margin-top: 2rem; 
+  margin-bottom: 0;
+  color: var(--color-white); 
+}
+
+.course__info {
+  padding: 2rem;
+}
+
+.course__info p {
+  margin: 1.2rem;
+  font-size: 0.9rem;
+}
+
+/* ============= MEDIA QUERIES (TABLETS) ============= */
+@media screen and (max-width: 825px) {
+  .courses {
+    width: var(--container-width-md);
+  }
+
+  .courses h2 {
+    margin-top: -15rem;
+    text-align: center; 
+  }
+
+  .courses__container {
+    grid-template-columns: 1fr;        
+  }
+
+  .course:first-child {
+    width: 45rem; 
+    margin-top: -8rem;               
+  }
+
+  .course {
+    margin-bottom: 0;
+  }
+}
+
+/* ============= MEDIA QUERIES (Phone) ============= */
+@media screen and (max-width: 400px) {
+  .courses {
+    width: var(--container-width-sm);    
+  }
+
+  .course:first-child {
+    width: 21.7rem;
+    margin: auto;    
+  }
+
+  .courses h2 {
+    margin-top: -17rem;
+    font-size: 1.5rem;
+  }
+
+  .course__heading h1 {    
+    font-size: 2rem;
+  }
+}

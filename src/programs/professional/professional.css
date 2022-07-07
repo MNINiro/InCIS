@@ -1,0 +1,85 @@
+.pro__container div:not(:last-child) {
+    background: var(--color-bg1);
+    padding: 2rem;
+    margin: 2rem 0 5rem 0;
+    border-radius: 1rem;
+}
+.pro__container h2 {
+    color: var(--color-warning);
+    text-transform: capitalize;
+}
+
+.pro__container div p {
+    font-size: 1.25rem;
+    text-align: justify;
+    margin-bottom: 1rem;
+    line-height: 3rem;
+    transition: var(--transition);
+}
+
+.pro__courses {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    background: var(--color-bg1);
+    padding: 2rem;
+    margin: 2rem 0 5rem 0;
+    border-radius: 1rem;
+}   
+
+
+.pro__office, .pro__graphics, .pro__programming {
+    border: 5px solid var(--color-primary);
+    padding: 2rem;
+    margin: 2rem 0 5rem 0;
+    border-radius: 1rem;    
+}
+
+.pro__bottom{
+    margin-top: -3rem;
+    text-align: center;
+    color: var(--color-danger);
+    margin-bottom: 2rem;
+}
+
+/* ============ media queries ============= */
+@media screen and (max-width: 820px) {
+    .pro__container {
+        width: var(--container-width-md);        
+    }
+
+    .pro__container div{        
+        width: 45rem;        
+    }
+    .pro__courses {
+        display: grid;
+        grid-template-columns: 1fr;        
+    }
+
+    .pro__bottom{
+        font-size: 2rem;                
+    }
+
+    /* .pro__heading img {        
+        margin-top: 20rem;        
+    }   */
+}
+
+@media screen and (max-width: 400px) {
+    .pro__container {
+        width: var(--container-width-sm);        
+    }
+
+    .pro__container div{        
+        width: 22rem;          
+    }
+
+    .pro__container div p {
+        text-align: left;
+        font-size: 1rem;
+    }
+    
+    .pro__container .pro__bottom{
+        text-align: center;
+    }
+}
